@@ -1,5 +1,18 @@
-// 0 1 1 2 3 5 8 13...
+//My Function
+// 0,1,1,2,3,5,8
+function fibonacci(num) {
+  fibArray = [0,1]
+  for (i=2; i<=num; i++) {
+    let seq1 = fibArray[i-2]
+    let seq2 = fibArray[i-1]
+    let value = seq1 + seq2
+    fibArray[i] = value
+  }
 
+  return fibArray[num]
+}
+
+//Stuff that Ben made
 const cache = {}
 
 
@@ -44,6 +57,7 @@ function fibonacci(num) {
 
 //   return seq[seq.length-1]
 // }
+
 
 if (require.main === module) {
   // add your own tests in here
